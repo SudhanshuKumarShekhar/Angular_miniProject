@@ -1,0 +1,13 @@
+<div class="max-w-md mx-auto mt-10">
+  <div class="h-60 overflow-y-auto p-2 mb-2 border">
+    @for(mesg of messages(); track mesg) {
+      <div class="bg-gray-200 p-2 mb-1 rounded">
+        {{ mesg }}
+      </div>
+
+    }
+  </div>
+  <input type="text" placeholder="Type a message..."
+   class="border p-2 w-full" #input
+   (keyup.enter)="send(input.value); input.value=''">
+</div>
